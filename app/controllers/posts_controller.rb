@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
 
-    def index
-        @posts = Post.all
-      end
+def index
+    @posts = Post.all
+end
       
-      def show
-        @post = Post.find_by({ "id" => params["id"] })
-        @place = Place.find_by({ "id" => @post["place_id"] })
-      end
+def show
+     @post = Post.find_by({ "id" => params["id"] })
+     @place = Place.find_by({ "id" => @post["place_id"] })
+ end
 
 
   def new
